@@ -1,0 +1,24 @@
+.bts {
+  display: inline-block;
+  min-width: 217px;
+  background-color: $cyan;
+  font-family: "Fraunces";
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 25px;
+  color: $cream;
+  padding: 15px 30px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 6px;
+  border: none;
+
+  &:hover {
+    background-color: #66d2cf;
+  }
+
+  &:active {
+    background-color: #e2dedb;
+  }
+}
