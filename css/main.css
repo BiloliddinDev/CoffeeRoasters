@@ -558,6 +558,7 @@ template {
   }
 }
 .colloction {
+  padding-top: 85px;
   background-image: url(../../images/collection.png);
   background-repeat: no-repeat;
   background-position: top center;
@@ -567,7 +568,6 @@ template {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   margin-bottom: 188px;
 }
 .colloction__box {
@@ -577,9 +577,6 @@ template {
 }
 .colloction__image {
   align-self: center;
-}
-.colloction__image:first-child {
-  margin-top: 15px;
 }
 .colloction__title {
   font-family: "Fraunces 9pt";
@@ -644,6 +641,8 @@ template {
   .colloction {
     flex-direction: column;
     margin: 0 auto;
+    align-items: center;
+    margin-bottom: 120px;
   }
   .colloction__box {
     flex-direction: column;
@@ -670,5 +669,8 @@ template {
   .colloction__image {
     margin-right: 0;
     margin-bottom: 24px;
+  }
+  .images1 {
+    margin-top: 13px;
   }
 }/*# sourceMappingURL=main.css.map */
