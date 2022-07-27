@@ -367,4 +367,308 @@ template {
   font-style: normal;
   font-weight: 900;
   src: local(""), url("../fonts/fraunces-v23-latin-900.woff2") format("woff2"), url("../fonts/fraunces-v23-latin-900.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+.header {
+  padding-top: 44px;
+  padding-bottom: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__logo {
+  display: block;
+}
+.header__nav-link {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 15px;
+  color: #83888f;
+  font-weight: 700;
+}
+.header__nav-link:hover {
+  color: #333d4b;
+}
+.header__nav-link:not(:last-child) {
+  margin-right: 33px;
+}
+.header__menu {
+  flex-shrink: 0;
+  display: none;
+  width: 16px;
+  height: 15px;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  background-image: url("./../images/menu.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    padding-top: 40px;
+    padding-bottom: 53px;
+  }
+  .header__nav {
+    margin-top: 10px;
+  }
+}
+@media only screen and (max-width: 376px) {
+  .header {
+    flex-direction: row;
+    padding-top: 32px;
+    padding-bottom: 40px;
+    position: relative;
+  }
+  .header__logo {
+    width: 163px;
+    height: 18px;
+  }
+  .header__nav {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    height: 100vh;
+    background-image: linear-gradient(0deg, rgba(254, 252, 247, 0.504981) 0%, #fefcf7 55.94%);
+  }
+  .header__nav--open {
+    display: flex;
+  }
+  .header__nav-link {
+    font-family: "Fraunces";
+    font-size: 24px;
+    line-height: 32px;
+    color: #333d4b;
+    margin: 0 !important;
+  }
+  .header__nav-link + .header__nav-link {
+    margin-top: 32px !important;
+  }
+  .header__nav-link:first-child {
+    margin-top: 40px !important;
+  }
+  .header__menu {
+    display: block;
+  }
+}
+.button {
+  display: inline-block;
+  min-width: 217px;
+  background-color: #0e8784;
+  font-family: "Fraunces";
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 25px;
+  color: #fefcf7;
+  padding: 15px 30px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 6px;
+  border: none;
+}
+.button:hover {
+  background-color: #66d2cf;
+}
+.button:active {
+  background-color: #e2dedb;
+}
+
+.hero {
+  padding: 117px 85px;
+  background-image: url("./../images/bg-image.jpg");
+  background-repeat: no-repeat;
+  background-size: auto;
+  border-radius: 10px;
+  margin-bottom: 136px;
+}
+.hero__left {
+  max-width: 493px;
+}
+.hero__title {
+  font-size: 72px;
+  line-height: 72px;
+  font-weight: 900;
+  color: #fefcf7;
+  margin: 0;
+  font-family: "Fraunces";
+}
+.hero__desc {
+  margin-top: 32px;
+  margin-bottom: 56px;
+  font-size: 16px;
+  line-height: 26px;
+  color: #fefcf7;
+  opacity: 0.8;
+}
+
+@media only screen and (max-width: 768px) {
+  .hero {
+    padding: 104px 58px;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 145px;
+  }
+  .hero__title {
+    font-size: 48px;
+    line-height: 48px;
+    width: 329px;
+    height: 97px;
+  }
+  .hero__desc {
+    margin-top: 24px;
+    margin-bottom: 40px;
+    font-size: 15px;
+    line-height: 25px;
+    width: 398px;
+    height: 75px;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .hero {
+    padding: 100px 24px;
+    background-image: url("./../images/bg-sm.jpg");
+    background-size: cover;
+    margin-bottom: 120px;
+  }
+  .hero__left {
+    text-align: center;
+  }
+  .hero__title {
+    font-size: 40px;
+    line-height: 40px;
+    width: 279px;
+  }
+  .hero__desc {
+    margin-top: 24px;
+    margin-bottom: 40px;
+    font-size: 15px;
+    line-height: 25px;
+    width: 279px;
+    height: 101px;
+  }
+}
+.colloction {
+  background-image: url(../../images/collection.png);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: contain;
+  padding-top: 126px;
+  max-width: 1110px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 188px;
+}
+.colloction__box {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.colloction__image {
+  align-self: center;
+}
+.colloction__image:first-child {
+  margin-top: 15px;
+}
+.colloction__title {
+  font-family: "Fraunces 9pt";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 32px;
+  color: #333d4b;
+  margin: 0;
+  margin-top: 71.55px;
+  margin-bottom: 24px;
+}
+.colloction__text {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  width: 255px;
+  height: 78px;
+}
+
+@media only screen and (max-width: 768px) {
+  .colloction {
+    background-image: url(https://coffee-roasters-ochilov-akrom.netlify.app/images/tablet-collection-bg.png);
+    padding-top: 59px;
+    flex-direction: column;
+    max-width: 670px;
+    width: 100%;
+    margin-bottom: 130px;
+  }
+  .colloction__box {
+    display: flex;
+    flex-direction: row;
+    text-align: start;
+    align-items: center;
+    margin-bottom: 47px;
+  }
+  .colloction__image {
+    margin-right: 36px;
+  }
+  .colloction__title {
+    margin: 0;
+    margin-bottom: 24px;
+    font-family: "Fraunces 9pt";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .colloction__text {
+    font-family: "Barlow";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+    max-width: 282px;
+    max-height: 50px;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .colloction {
+    flex-direction: column;
+    margin: 0 auto;
+  }
+  .colloction__box {
+    flex-direction: column;
+    text-align: center;
+    max-width: 282px;
+  }
+  .colloction__title {
+    font-family: "Fraunces 9pt";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 32px;
+    margin: 0;
+    margin-bottom: 16px;
+  }
+  .colloction__text {
+    font-family: "Barlow";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+    margin: 0;
+  }
+  .colloction__image {
+    margin-right: 0;
+    margin-bottom: 24px;
+  }
 }/*# sourceMappingURL=main.css.map */

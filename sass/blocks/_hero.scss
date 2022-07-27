@@ -1,0 +1,83 @@
+.hero {
+  padding: 117px 85px;
+  background-image: url("./../images/bg-image.jpg");
+  background-repeat: no-repeat;
+  background-size: auto;
+  border-radius: 10px;
+  margin-bottom: 136px;
+
+  &__left {
+    max-width: 493px;
+  }
+
+  &__title {
+    font-size: 72px;
+    line-height: 72px;
+    font-weight: 900;
+    color: $cream;
+    margin: 0;
+    font-family: "Fraunces";
+  }
+
+  &__desc {
+    margin-top: 32px;
+    margin-bottom: 56px;
+    font-size: 16px;
+    line-height: 26px;
+    color: $cream;
+    opacity: 0.8;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .hero {
+    padding: 104px 58px;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 145px;
+
+    &__title {
+      font-size: 48px;
+      line-height: 48px;
+      width: 329px;
+      height: 97px;
+    }
+
+    &__desc {
+      margin-top: 24px;
+      margin-bottom: 40px;
+      font-size: 15px;
+      line-height: 25px;
+      width: 398px;
+      height: 75px;
+    }
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .hero {
+    padding: 100px 24px;
+    background-image: url("./../images/bg-sm.jpg");
+    background-size: cover;
+    margin-bottom: 120px;
+
+    &__left {
+      text-align: center;
+    }
+
+    &__title {
+      font-size: 40px;
+      line-height: 40px;
+      width: 279px;
+    }
+
+    &__desc {
+      margin-top: 24px;
+      margin-bottom: 40px;
+      font-size: 15px;
+      line-height: 25px;
+      width: 279px;
+      height: 101px;
+    }
+  }
+}
